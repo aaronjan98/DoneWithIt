@@ -1,24 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet, View, SafeAreaView } from 'react-native';
+import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
+import WelcomeScreen from './app/screens/WelcomeScreen';
 
-export default function App() {
-  let x = 1;
-  console.log('App executed');
+function App() {
   
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text>Hello React Native World!</Text>
-      <StatusBar style="auto" />
-    </SafeAreaView>
+  return ( 
+    <WelcomeScreen />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'dodgerblue',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
